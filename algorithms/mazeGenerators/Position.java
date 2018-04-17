@@ -13,11 +13,11 @@ public class Position {
         this.columnIndex = columnNumber;
     }
 
-    int getRowIndex(){
+    public int getRowIndex(){
        return this.rowIndex;
     }
 
-    int getColumnNumber(){
+    public int getColumnIndex(){
         return this.columnIndex;
     }
 

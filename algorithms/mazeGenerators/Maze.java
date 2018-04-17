@@ -65,9 +65,9 @@ public class Maze {
         {
             for(int j = 0; j<m_columns; j++)
             {
-                if(i==startPosition.getRowIndex() && j==startPosition.getColumnPosition())
+                if(i==startPosition.getRowIndex() && j==startPosition.getColumnIndex())
                     System.out.println("S");
-                else if(i==goalPosition.getRowIndex() && j==goalPosition.getColumnPosition())
+                else if(i==goalPosition.getRowIndex() && j==goalPosition.getColumnIndex())
                     System.out.println("E");
                 else
                     System.out.print(m_maze[i][j]);
