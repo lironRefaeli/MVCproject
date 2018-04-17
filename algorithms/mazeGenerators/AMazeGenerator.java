@@ -7,7 +7,7 @@ public abstract class AMazeGenerator implements IMazeGenerator {
 
 
     @Override
-    public long measureAlgorithmTimeMilles(int numOfRows, int numOfColumns) {
+    public long measureAlgorithmTimeMillis(int numOfRows, int numOfColumns) {
         long startTime = System.currentTimeMillis();
         generate(numOfRows, numOfColumns);
         return (System.currentTimeMillis() - startTime);

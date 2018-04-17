@@ -24,7 +24,7 @@ public interface IMazeGenerator {
      * @param numOfColumns
      * @return long
      */
-    long measureAlgorithmTimeMilles(int numOfRows, int numOfColumns);
+    long measureAlgorithmTimeMillis(int numOfRows, int numOfColumns);
 
 
 }

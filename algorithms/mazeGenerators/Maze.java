@@ -16,30 +16,30 @@ public class Maze {
     private Position startPosition;
     private Position goalPosition;
 
-
-    public Maze(Position start,Position goal) {
-        this.m_rows=100;
-        this.m_columns=100;
-        this.m_maze=new int[m_rows][m_columns];
-        this.startPosition=start;
-        this.goalPosition=goal;
-
-        for(int i = 0; i<m_rows; i++)
-            for(int j = 0; j<m_columns; j++)
-                m_maze[i][j] = 0;
-    }
-
-    public Maze(int row, int column,Position start,Position goal) {
+    public Maze(int row, int column, Position start, Position goal) {
         this.m_rows=row;
         this.m_columns=column;
-        this.m_maze=new int[m_rows][m_columns];
+        this.m_maze= new int[m_rows][m_columns];
         this.startPosition=start;
         this.goalPosition=goal;
 
-        for(int i = 0; i<m_rows; i++)
-            for(int j = 0; j<m_columns; j++)
-                m_maze[i][j] = 0;
+        for(int i = 0; i < row; i++){
+            for(int j = 0; j < column; j++){
+                m_maze[i][j] = 1;
+            }
+
+        }
     }
+
+    public int getM_rows() {
+        return m_rows;
+    }
+
+    public int getM_columns() {
+        return m_columns;
+    }
+
+    public int[][] getM_maze(){ return this.m_maze; }
 
     /**
      * this method is used to get the start position of the maze
@@ -60,15 +60,15 @@ public class Maze {
     /**
      * this method is used to print the maze
      */
-    public void Print(){
+    public void print(){
         for(int i = 0; i<m_rows; i++)
         {
             for(int j = 0; j<m_columns; j++)
             {
                 if(i==startPosition.getRowIndex() && j==startPosition.getColumnIndex())
-                    System.out.println("S");
+                    System.out.print("S");
                 else if(i==goalPosition.getRowIndex() && j==goalPosition.getColumnIndex())
-                    System.out.println("E");
+                    System.out.print("E");
                 else
                     System.out.print(m_maze[i][j]);
             }
