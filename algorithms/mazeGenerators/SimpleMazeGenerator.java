@@ -63,7 +63,7 @@ public class SimpleMazeGenerator extends AMazeGenerator {
         IMazeGenerator simpleMazeGenerator = new SimpleMazeGenerator();
         long estimatedTime = simpleMazeGenerator.measureAlgorithmTimeMillis(1000, 1000);
         System.out.println(estimatedTime);
-        // Maze maze = myMazeGenerator.generate(10,10);
-        // maze.print();
+        Maze maze = simpleMazeGenerator.generate(10,10);
+        maze.print();
     }
 }

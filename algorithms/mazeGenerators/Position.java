@@ -13,6 +13,10 @@ public class Position {
         this.columnIndex = columnNumber;
     }
 
+    public boolean isEqual(Position other){
+        return (rowIndex == other.rowIndex && columnIndex == other.columnIndex);
+    }
+
     public int getRowIndex(){
        return this.rowIndex;
     }
