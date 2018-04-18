@@ -10,6 +10,8 @@ public class SimpleMazeGenerator extends AMazeGenerator {
 
     @Override
     public Maze generate(int numOfRows, int numOfColumns) {
+        if(numOfRows <= 1 || numOfColumns <= 1)
+            throw new IllegalArgumentException("Must at least have 2 rows and 2 columns");
         Position startPosition = new Position(0, 0);
         Position endPosition = new Position(numOfRows-1, numOfColumns-1);
         Maze myMaze = new Maze(numOfRows, numOfColumns, startPosition, endPosition);
@@ -58,10 +60,10 @@ public class SimpleMazeGenerator extends AMazeGenerator {
     }
     //just a way to check that this class works fine
     public static void main(String[] args) {
-        IMazeGenerator simpleMazeGenerator = new MyMazeGenerator();
+        IMazeGenerator simpleMazeGenerator = new SimpleMazeGenerator();
         long estimatedTime = simpleMazeGenerator.measureAlgorithmTimeMillis(1000, 1000);
         System.out.println(estimatedTime);
-        // Maze maze = myMazeGenerator.generate(10,10);
-        // maze.print();
+        Maze maze = simpleMazeGenerator.generate(10,10);
+        maze.print();
     }
 }

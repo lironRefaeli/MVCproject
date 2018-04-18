@@ -13,18 +13,14 @@ public class Position {
         this.columnIndex = columnNumber;
     }
 
-    /**
-     * this method is used to get the row's index
-     * @return the index of the row
-     */
+    public boolean isEqual(Position other){
+        return (rowIndex == other.rowIndex && columnIndex == other.columnIndex);
+    }
+
     public int getRowIndex(){
        return this.rowIndex;
     }
 
-    /**
-     * this method is used to get the column's index
-     * @return the index of the column
-     */
     public int getColumnIndex(){
         return this.columnIndex;
     }
